@@ -85,7 +85,10 @@ class CalendarHeader extends Component {
           {leftArrow}
           <View style={{ flexDirection: 'row' }}>
             <Text style={this.style.monthText}>
-              {this.props.month.toString(this.props.monthFormat ? this.props.monthFormat : 'MMMM yyyy')}
+              {this.props.month.toString(this.props.monthFormat ? this.props.monthFormat : 'MMMM').toUpperCase()}
+            </Text>
+            <Text style={this.style.monthText}>
+              {this.props.month.toString(this.props.monthFormat ? this.props.monthFormat : 'yyyy')}
             </Text>
             {indicator}
           </View>
